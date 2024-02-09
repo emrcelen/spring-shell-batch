@@ -1,0 +1,5 @@
+1707481744845:db model -p 5432 -n demo --username realworld --password realworld --select postgre
+1707481746991:db source
+1707481750340:db table -n person
+1707481763584:batch model -f person -m emrecln42@gmail.com
+1707481766518:batch start

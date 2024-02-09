@@ -1,0 +1,41 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: "jdbc:h2:mem:batchdb"
+    username: batch
+    password:
+  batch:
+    job:
+      enabled: false
+    jdbc:
+      initialize-schema: always
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: batch
+    password: batch
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: batchjshell@gmail.com
+    password: rnruaaakzjpthvis
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls.enable: true
+  application:
+    name: BatchJShell
+info:
+  component: Real World Application
+  version: 0.0.1
+batch:
+  rabbit:
+    queue: "batch-queue"
+    exchange: "batch-exchange"
+    routing: "batch-routing"
